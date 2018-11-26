@@ -13,11 +13,12 @@ See [TimeKeeper][] for more details.
 
 ### Installation
 
-1. `database_installer.sql` contains the create table query for the one table
-   that TimeKeeper uses.
-2. Rename `config.example.php` to `config.php` and fill in the empty fields.
-3. Run `composer install` to install the dependencies.
-4. Run `composer start` to fire up the development server.
+1. Run `composer install` to install all dependencies.
+2. Copy `src/environment.example.php` to `src/example.php` and fill in the
+   missing database constants.
+3. Run `composer doctrine migrations:migrate` to install the database tables.
+
+You can now run `composer start` to start the internal PHP development server.
 
 ### Testing
 

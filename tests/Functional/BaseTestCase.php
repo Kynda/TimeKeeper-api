@@ -7,6 +7,9 @@ use Slim\Http\Request;
 use Slim\Http\Response;
 use Slim\Http\Environment;
 
+define('APP_ROOT', __DIR__ . '/../..');
+define('APPLICATION_ENV', 'TESTING');
+
 /**
  * This is an example class that shows how you could set up a method that
  * runs the application. Note that it doesn't cover all use-cases and is
@@ -36,7 +39,7 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
         $environment = Environment::mock(
             [
                 'REQUEST_METHOD' => $requestMethod,
-                'REQUEST_URI' => $requestUri
+                'REQUEST_URI' => $requestUri,
             ]
         );
 

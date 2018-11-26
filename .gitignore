@@ -1,3 +1,6 @@
+.env
+.data
+/src/environment.php
 /vendor/
 /logs/*
 !/logs/README.md
